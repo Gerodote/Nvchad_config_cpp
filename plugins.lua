@@ -74,7 +74,7 @@ local plugins = {
   },
   {
     "drmikehenry/vim-headerguard",
-    lazy = false,
+    ft = { "hpp", "h", "hh", "hxx" },
     config = function()
       require "custom.configs.vim-headerguard"
     end,
@@ -86,6 +86,25 @@ local plugins = {
       require "custom.configs.neogen"
     end,
     lazy = false,
+  },
+  {
+    "gelguy/wilder.nvim",
+    dependencies = {
+      { "Gerodote/fzy-lua-native_updated_gitignore_repaired_makefile", build = "make", lazy = false },
+      { "nixprime/cpsm", dependencies = { "ctrlpvim/ctrlp.vim", lazy = false }, lazy = false, build = "bash ./install.sh" },
+    },
+    config = function()
+      require "custom.configs.wilder"
+    end,
+    keys = { "/", "?", ":" },
+    build = function()
+      vim.cmd([[
+        let &rtp=&rtp
+      ]]
+      )
+      vim.api.nvim_command "runtime! plugin/rplugin.vim"
+      vim.api.nvim_command ":UpdateRemotePlugins"
+    end,
   },
 
   -- To make a plugin not be loaded
