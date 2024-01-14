@@ -74,7 +74,7 @@ local plugins = {
   },
   {
     "drmikehenry/vim-headerguard",
-    ft = { "hpp", "h", "hh", "hxx" },
+    lazy = false,
     config = function()
       require "custom.configs.vim-headerguard"
     end,
