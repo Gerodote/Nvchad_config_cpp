@@ -38,6 +38,25 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- cmake stuff
+    "cmakelint",
+    "cmakelang",
+    "cmake-language-server",
+
+    -- python stuff
+    "python-lsp-server",
+    "yapf",
+
+    -- yaml stuff
+    "yamlfmt",
+    "yamlint",
+    "yaml-language-server",
+    
+    -- json stuff
+    "json-lsp",
+    "json-lint",
+
   },
 }
 
