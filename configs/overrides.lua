@@ -50,12 +50,12 @@ M.mason = {
 
     -- yaml stuff
     "yamlfmt",
-    "yamlint",
+    "yamllint",
     "yaml-language-server",
     
     -- json stuff
     "json-lsp",
-    "json-lint",
+    "jsonlint",
 
   },
 }
