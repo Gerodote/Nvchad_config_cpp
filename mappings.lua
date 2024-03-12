@@ -7,6 +7,128 @@ M.general = {
   },
 }
 
+M.dap = {
+  n = {
+    ["<F5>"] = {
+      function()
+        require("dap").continue()
+      end,
+      "Continue",
+    },
+    ["<F10>"] = {
+      function()
+        require("dap").step_over()
+      end,
+      "Step over",
+    },
+    ["<F11>"] = {
+      function()
+        require("dap").step_into()
+      end,
+      "Step into",
+    },
+    ["<F12>"] = {
+      function()
+        require("dap").step_out()
+      end,
+      "Step out",
+    },
+    ["<leader>b"] = {
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      "Toggle breakpoint",
+    },
+    ["<leader>bb"] = {
+      function()
+        require("dap").set_breakpoint()
+      end,
+      "Set breakpoint",
+    },
+    ["<leader>lp"] = {
+      function()
+        require("dap").set_breakpoint(nil, nil, vim.fn.input "Log point message: ")
+      end,
+      "Set breakpoint with log point",
+    },
+    ["<leader>dr"] = {
+      function()
+        require("dap").repl.open()
+      end,
+      "Repl open?",
+    },
+    ["<leader>dl"] = {
+      function()
+        require("dap").run_last()
+      end,
+      "Run last?",
+    },
+  },
+}
+
+M.dapui = {
+  n = {
+    ["<leader>do"] = {
+      function()
+        require("dapui").open()
+      end,
+      "open",
+    },
+    ["<leader>dc"] = {
+      function()
+        require("dapui").close()
+      end,
+      "close",
+    },
+    ["<leader>de"] = {
+      function()
+        require("dapui").eval()
+      end,
+      "Show hover windows with evaluating expression",
+    },
+    ["<leader>dh"] = {
+      function()
+        require("dap.ui.widgets").hover()
+      end,
+      "Dap ui hover ?",
+    },
+    ["<leader>dp"] = {
+      function()
+        require("dap.ui.widgets").preview()
+      end,
+      "Dap ui preview ?",
+    },
+    ["<leader>df"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        widgets.centered_float(widgets.frames)
+      end,
+      "Dap ui widgets frame float ?",
+    },
+    ["<leader>ds"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        widgets.centered_float(widgets.scopes)
+      end,
+      "Dap ui widgets scopes float ?",
+    },
+  },
+  v = {
+    ["<leader>dh"] = {
+      function()
+        require("dap.ui.widgets").hover()
+      end,
+      "Dap ui hover ?",
+    },
+    ["<leader>dp"] = {
+      function()
+        require("dap.ui.widgets").preview()
+      end,
+      "Dap ui preview ?",
+    },
+  },
+}
+
 M.telescope = {
   n = {
     ["<leader>;"] = { ":Telescope commands<CR>", "Telescope commands" },
@@ -21,6 +143,7 @@ M.CMake = {
     ["<leader>R"] = { ":CMakeRun <CR>", "Run" },
     ["<leader>K"] = { ":CMakeSelectKit <CR>", "Select kit" },
     ["<leader>S"] = { ":CMakeSettings <CR>", "Project settings" },
+    ["<leader>cd"] = { ":CMakeDebug <CR>", "Debug. Wanna add args?`:CMakeTargetSettings`" },
     ["<leader>ce"] = { ":CMakeCloseExecutor <CR>", "Close executor" },
     ["<leader>cr"] = { ":CMakeCloseRunner <CR>", "Close runner" },
     ["<leader>oe"] = { ":CMakeOpenExecutor <CR>", "Open executor" },

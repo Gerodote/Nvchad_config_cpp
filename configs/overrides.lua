@@ -52,11 +52,14 @@ M.mason = {
     "yamlfmt",
     "yamllint",
     "yaml-language-server",
-    
+
     -- json stuff
     "json-lsp",
     "jsonlint",
 
+    -- debugging
+    "codelldb", -- c/c++/rust
+    "debugpy",  -- python
   },
 }
 
@@ -67,7 +70,7 @@ M.nvimtree = {
   },
   filters = {
     git_ignored = false,
-    dotfiles = false
+    dotfiles = false,
   },
 
   renderer = {

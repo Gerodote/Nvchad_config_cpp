@@ -2,7 +2,7 @@ require("cmake-tools").setup {
   cmake_command = "cmake", -- this is used to specify cmake command path
   cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt
   cmake_generate_options = { "-DCMAKE_EXPORT_COMPILE_COMMANDS=1", "-DFETCHCONTENT_QUIET=OFF", "--log-level DEBUG", "-DCMAKE_TOOLCHAIN_FILE=~/apps/vcpkg/scripts/buildsystems/vcpkg.cmake", "-DCPM_SOURCE_CACHE=~/.cache/cpm/" }, -- this will be passed when invoke `CMakeGenerate`
-  cmake_build_options = {"-j12", "--verbose"}, -- this will be passed when invoke `CMakeBuild`
+  cmake_build_options = {"-j24", "--verbose"}, -- this will be passed when invoke `CMakeBuild`
   -- support macro expansion:
   --       ${kit}
   --       ${kitGenerator}
@@ -65,3 +65,25 @@ require("cmake-tools").setup {
     refresh_rate_ms = 100, -- how often to iterate icons
   },
 }
+
+local cmake_tools = require("cmake-tools")
+local dap = require "dap"
+
+dap.adapters.cmake = {
+  type = "pipe",
+  pipe = "${pipe}",
+  executable = {
+    command = "cmake",
+    args = { "--debugger", "--debugger-pipe=${pipe}", tostring(cmake_tools.get_build_directory())},
+  },
+}
+
+dap.configurations.cmake = {
+  {
+    type = "cmake",
+    name = "Debug",
+    request = "launch",
+    program = "${file}",
+  },
+}
+

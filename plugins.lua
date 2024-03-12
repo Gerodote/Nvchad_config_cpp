@@ -91,21 +91,50 @@ local plugins = {
     "gelguy/wilder.nvim",
     dependencies = {
       { "Gerodote/fzy-lua-native_updated_gitignore_repaired_makefile", build = "make", lazy = false },
-      { "nixprime/cpsm", dependencies = { "ctrlpvim/ctrlp.vim", lazy = false }, lazy = false, build = "bash ./install.sh" },
+      {
+        "nixprime/cpsm",
+        dependencies = { "ctrlpvim/ctrlp.vim", lazy = false },
+        lazy = false,
+        build = "bash ./install.sh",
+      },
     },
     config = function()
       require "custom.configs.wilder"
     end,
     keys = { "/", "?", ":" },
     build = function()
-      vim.cmd([[
+      vim.cmd [[
         let &rtp=&rtp
       ]]
-      )
       vim.api.nvim_command "runtime! plugin/rplugin.vim"
       vim.api.nvim_command ":UpdateRemotePlugins"
     end,
   },
+  {
+      "mfussenegger/nvim-dap",
+      config = function()
+        require "custom.configs.nvim-dap"
+      end,
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+    },
+    config = function()
+      require "custom.configs.nvim-dap-ui"
+    end,
+    lazy = false,
+  },
+  -- {
+  --   "gergol/cmake-debugger.nvim",
+  --   dependencies = {
+  --     {"mfussenegger/nvim-dap-ui"},
+  --   },
+  --   -- setup using default opts
+  --   opts = {},
+  -- 
+  -- },
 
   -- To make a plugin not be loaded
   -- {
