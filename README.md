@@ -31,7 +31,9 @@ In general, it's great to use, though no debugger.
     - [x] nvim-dapui is connected
         - [x] added bindings for opening(`<leader>do`) and closing (`<leader>dc`) nvim-dapui .
     - [ ] nvim-dap-ui and cmake-tools are added at startup, not lazy.
-    - [ ] where's python debugger?
+    - [x] where's python debugger?
+        - [x] added debugpy through mason and copy pasted config for it with slight changes
+        - [x] toggle breakpoint, `<F5>`, wooalla 
 - [ ] More keybindigs for some plugins
     - [x] dap related
 	- [ ] telescope related
