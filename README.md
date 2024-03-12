@@ -26,6 +26,8 @@ In general, it's great to use, though no debugger.
             - [x] (Resolved) is taken at the initialization of neovim. Changed build dir? Right now only restart neovim.
     - [x] c++/c/rust debugger : press CMake debug (`<leader>cd`), enjoy
         - [x] codelldb by default is taken from meson. So, generally, no manual typing pathes
+        - [ ] how to go through asm instructions?
+        - [ ] how to place breakpoint at main, if executable is compiled with `-g0` ?
     - [x] nvim-dapui is connected
         - [x] added bindings for opening(`<leader>do`) and closing (`<leader>dc`) nvim-dapui .
     - [ ] nvim-dap-ui and cmake-tools are added at startup, not lazy.

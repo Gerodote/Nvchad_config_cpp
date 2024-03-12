@@ -44,8 +44,15 @@ M.dap = {
       function()
         require("dap").step_into()
       end,
-      "Step into",
+      "Step into by statement",
     },
+    -- seems to not work with codelldb ?
+    -- ["<F9>"] = {
+    --   function()
+    --     require("dap").step_into({steppingGranularity = 'instruction'})
+    --   end,
+    --   "Step into by instruction",
+    -- },
     ["<F12>"] = {
       function()
         require("dap").step_out()
