@@ -31,6 +31,7 @@ In general, it's great to use, though no debugger.
     - [ ] nvim-dap-ui and cmake-tools are added at startup, not lazy.
     - [ ] where's python debugger?
 - [ ] More keybindigs for some plugins
+    - [x] dap related
 	- [ ] telescope related
 	- [ ] gitsigns related
 - [ ] Find out if there's a way to turn on less plugin not lazily. Investigation

@@ -9,6 +9,25 @@ M.general = {
 
 M.dap = {
   n = {
+    ["<leader>dr"] = {
+      function() require("dap").restart() end, "Restart session"
+    },
+    ["<leader>rb"] = {
+      function() require("dap").clear_breakboints() end, "Remove all breakpoints"
+    },
+    ["<leader>dt"] = {
+      function() require("dap").terminate() end, "Terminate session"
+    },
+    ["<leader>tu"] = { -- sTack up
+      function() require("dap").up() end, "Go up in current stacktrace without stepping"
+    },
+    ["<leader>td"] = { -- sTack down
+      function() require("dap").down() end, "Go down in current stacktrace without stepping"
+    },
+    ["<leader>rc"] = {
+      function() require("dap").reverse_continue() end, "Reverse continue. Debugger & debug adapter have to support it"
+    },
+
     ["<F5>"] = {
       function()
         require("dap").continue()
@@ -51,7 +70,7 @@ M.dap = {
       end,
       "Set breakpoint with log point",
     },
-    ["<leader>dr"] = {
+    ["<leader>do"] = {
       function()
         require("dap").repl.open()
       end,
