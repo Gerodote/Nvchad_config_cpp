@@ -21,13 +21,13 @@ In general, it's great to use, though no debugger.
 
 ## TODO
 - [x] Debugger stuff. Console GDB/LLDB is cool, but some want it inside editor...
-    - [x] CMake debugger in neovim !!! CMake Generate (<leader>G), toggle a breakpoint (<leader>b), press Continue(<F5>), it works! Prerequisite: cmake is 3.27+ and is compiled with dap feature. (for gentoo users `flaggie dev-build/cmake +dap`).
+    - [x] CMake debugger in neovim !!! CMake Generate (`<leader>G`), toggle a breakpoint (`<leader>b`), press Continue(`<F5>`), it works! Prerequisite: cmake is 3.27+ and is compiled with dap feature. (for gentoo users `flaggie dev-build/cmake +dap`).
         - [x] build folder is taken from cmake plugin
             - [ ] is taken at the initialization of neovim. Changed build dir? Right now only restart neovim.
-    - [x] c++/c/rust debugger : press CMake debug (<leader>cd), enjoy
+    - [x] c++/c/rust debugger : press CMake debug (`<leader>cd`), enjoy
         - [x] codelldb by default is taken from meson. So, generally, no manual typing pathes
     - [x] nvim-dapui is connected
-        - [x] added bindings for opening(<leader>do) and closing (<leader>dc) nvim-dapui .
+        - [x] added bindings for opening(`<leader>do`) and closing (`<leader>dc`) nvim-dapui .
     - [ ] it's added at startup, not lazy.
 - [ ] More keybindigs for some plugins
 	- [ ] telescope related
