@@ -13,6 +13,7 @@ M.treesitter = {
     "cpp",
     "markdown",
     "markdown_inline",
+    "yaml",
   },
   indent = {
     enable = true,

@@ -24,6 +24,7 @@ In general, it's great to use, though no debugger.
     - [x] CMake debugger in neovim !!! CMake Generate (`<leader>G`), toggle a breakpoint (`<leader>b`), press Continue(`<F5>`), it works! Prerequisite: cmake is 3.27+ and is compiled with dap feature. (for gentoo users `flaggie dev-build/cmake +dap`).
         - [x] build folder is taken from cmake plugin
             - [x] (Resolved) is taken at the initialization of neovim. Changed build dir? Right now only restart neovim.
+        - [ ] it doesn't take args for a target.
     - [x] c++/c/rust debugger : press CMake debug (`<leader>cd`), enjoy
         - [x] codelldb by default is taken from meson. So, generally, no manual typing pathes
         - [ ] how to go through asm instructions?
@@ -38,6 +39,10 @@ In general, it's great to use, though no debugger.
     - [x] dap related
 	- [ ] telescope related
 	- [ ] gitsigns related
+- [ ] get keybindings to new-old format, as nvchad v2.5 changed it to default.
+- [x] tmux navigator. Added keybindings for it.
+- [x] added CodeCompanion plugin. Do you have ollama installed? Do you have a self-deployed AI ? This plugin is for you
+    - [ ] still no shortcuts. `:CodeCompanion` will give you options to use.
 - [ ] Find out if there's a way to turn on less plugin not lazily. Investigation
 - [x] Find a plugin for cool command palette
 	- [ ] [hachy/cmdpalette.nvim](https://github.com/hachy/cmdpalette.nvim) doesn't support ranges and feels not so good  

@@ -7,6 +7,16 @@ M.general = {
   },
 }
 
+M.tmux_navigator = {
+  n = {
+    ["<C-h>"] = { ":TmuxNavigateLeft<CR><ESC>", "Window left" },
+    ["<C-l>"] = { ":TmuxNavigateRight<CR><ESC>", "Window right" },
+    ["<C-j>"] = { ":TmuxNavigateDown<CR><ESC>", "Window down" },
+    ["<C-k>"] = { ":TmuxNavigateUp<CR><ESC>", "Window up" },
+    ["<C-b>"] = { ":TmuxNavigatePrevious<CR><ESC>", "Previous window" },
+  }
+}
+
 M.dap = {
   n = {
     ["<leader>dr"] = {

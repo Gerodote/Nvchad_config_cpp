@@ -111,30 +111,45 @@ local plugins = {
     end,
   },
   {
-      "mfussenegger/nvim-dap",
-      config = function()
-        require "custom.configs.nvim-dap"
-      end,
+    "mfussenegger/nvim-dap",
+    config = function()
+      require "custom.configs.nvim-dap"
+    end,
   },
   {
     "rcarriga/nvim-dap-ui",
     dependencies = {
       "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
     },
     config = function()
       require "custom.configs.nvim-dap-ui"
     end,
     lazy = false,
   },
-  -- {
-  --   "gergol/cmake-debugger.nvim",
-  --   dependencies = {
-  --     {"mfussenegger/nvim-dap-ui"},
-  --   },
-  --   -- setup using default opts
-  --   opts = {},
-  -- 
-  -- },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+
+  {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-lua/plenary.nvim",
+      {
+        "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
+        opts = {},
+      },
+    },
+    config = function()
+      require "custom.configs.codecompanion"
+    end,
+    lazy = false,
+  },
+
+
 
   -- To make a plugin not be loaded
   -- {
