@@ -16,8 +16,8 @@ Then clone this repo to `custom` folder. `git clone https://github.com/Gerodote/
 
 
 ## Is it good?
-It's have clangd through Mason, cmake plugin, some keybindings. 
-In general, it's great to use, though no debugger.
+It's have clangd through Mason, cmake plugin, cmake debugger, c++ debugger, python debugger, some keybindings. 
+In general, it's great to use.
 
 ## TODO
 - [x] Debugger stuff. Console GDB/LLDB is cool, but some want it inside editor...
@@ -40,7 +40,7 @@ In general, it's great to use, though no debugger.
 	- [ ] telescope related
 	- [ ] gitsigns related
 - [ ] get keybindings to new-old format, as nvchad v2.5 changed it to default.
-- [x] tmux navigator. Added keybindings for it.
+- [x] tmux navigator. Added keybindings for it. Ctrl+hjkl for navigating + tmux integration!!!
 - [x] added CodeCompanion plugin. Do you have ollama installed? Do you have a self-deployed AI ? This plugin is for you
     - [ ] still no shortcuts. `:CodeCompanion` will give you options to use.
 - [ ] Find out if there's a way to turn on less plugin not lazily. Investigation

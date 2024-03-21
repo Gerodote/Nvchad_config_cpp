@@ -81,7 +81,7 @@ dap.adapters.cmake = function(callback, config)
     pipe = "${pipe}",
     executable = {
       command = "cmake",
-      args = { "--debugger", "--debugger-pipe=${pipe}", tostring(cmake_tools.get_build_directory()) },
+      args = { "--debugger", "--debugger-pipe=${pipe}", tostring(cmake_tools.get_build_directory()), "--log-level DEBUG", "-DFETCHCONTENT_QUIET=OFF"},
     },
   }
 end
