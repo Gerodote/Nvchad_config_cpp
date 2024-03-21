@@ -24,7 +24,7 @@ In general, it's great to use.
     - [x] CMake debugger in neovim !!! CMake Generate (`<leader>G`), toggle a breakpoint (`<leader>b`), press Continue(`<F5>`), it works! Prerequisite: cmake is 3.27+ and is compiled with dap feature. (for gentoo users `flaggie dev-build/cmake +dap`).
         - [x] build folder is taken from cmake plugin
             - [x] (Resolved) is taken at the initialization of neovim. Changed build dir? Right now only restart neovim.
-        - [ ] it doesn't take args for a target.
+        - [ ] it doesn't take `generate_options` from `:CMakeSettings`.
     - [x] c++/c/rust debugger : press CMake debug (`<leader>cd`), enjoy
         - [x] codelldb by default is taken from meson. So, generally, no manual typing pathes
         - [ ] how to go through asm instructions?
@@ -51,5 +51,5 @@ In general, it's great to use.
 	- [ ] [VonHeikemen/fine-cmdline.nvim](https://github.com/VonHeikemen/fine-cmdline.nvim) doesn't support ranges
 	- [ ] [mrjones2014/legendary.nvim](https://github.com/mrjones2014/legendary.nvim) seems to *not* have ability to somehow get commands from everywhere like `:Telescope commands` , though looks cool. Doesn't support ranges. 
 - [ ] Find out how to put more snippets and put them from somewhere. Investigation.
-- [ ] Find good alternative to `:s`. 
+- [ ] Find a good alternative to `:s`. 
 - [ ] Allow more diversity of folder structures for include-guard plugin. Now only works if there's `src` in a path to a file. Maybe rewrite plugin to lua and use neovim's API?
